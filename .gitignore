@@ -1,0 +1,4 @@
+.Django
+/venv
+__pycache__
+*.pyc
