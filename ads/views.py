@@ -5,6 +5,7 @@ from .models import Ads
 
 def ads_list(request):
     all_ads = Ads.objects.all()
+    
     first = all_ads[0]
     print(all_ads)
     print(type(all_ads))
@@ -15,3 +16,4 @@ def ads_list(request):
         'all_ads': all_ads
     }
     return render(request, 'index.html', context=context)
+
