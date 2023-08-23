@@ -30,7 +30,7 @@ class Ads(models.Model):
     title = models.CharField(max_length=150, blank=True)
     description = models.TextField(default="")
     price = models.FloatField(default=0)
-    image = models.ImageField(upload_to="images/ads/", default="images.jpg")
+    image = models.ImageField(upload_to="images/ads/")
     owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name='ads', null=True, blank=True)
     type = models.CharField(max_length=100, choices=TYPE_OF_ADS, default=LEARN)
     created_at = models.DateTimeField(default=timezone.now)
